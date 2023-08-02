@@ -1,0 +1,274 @@
+
+/* 全局样式设置，内边距和外边距都为 0，因为很多标签自带边距，这是我们不希望的 */
+*{padding: 0; margin: 0;list-style: none;}
+body{
+	font-family:"arial, helvetica, sans-serif" ;
+	color:#000;
+	list-style: none;
+}
+
+
+/*************头部的样式*************/
+.logoNavTop{
+	font-size: 16px;
+	background:rgba(34,73,118,0.95);
+	color: white;
+	height: 100px;
+	line-height: 50px;
+}
+/*媒体匹配,大屏幕才设置高度*/
+@media screen and ( max-width: 992px ){
+	.myTop{
+		margin-left:0px;
+	}
+	
+}
+@media screen and ( min-width: 992px ){
+	.myTop{
+		margin-left:0px;
+	}
+}
+.cdut img{
+	width:300px;
+	margin-top: 10px;
+}
+/* 去掉所有列表前面的黑色圆点 */
+li {
+    list-style: none;
+}
+
+/* 去掉链接的下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 设置 header（导航栏）的宽高以及背景色，一般我们会指定一个高度，方便内部元素继承这个属性 */
+#header {
+	display: flex;
+    width: 65%;
+    height: 60px;
+    margin-top:50px;
+    margin-left: 500px;
+}
+
+/* 设置列表样式，注意这里的 menu 并不是指代 ul 标签，而是 ul 下面的 div 块标签 */
+#header .menu {
+    display: flex;				/* display: flex：弹性盒子，很适合多个元素按一行或者一列排开 */
+    height: 100%;				/* 设置和导航栏 header 相同的高度 */
+    line-height: 60px;			/* 设置行高，注意不要使用 inherit（继承），因为 menu 的父标签不是 header，而是 ul，我们并没有设置 ul 的行高，无法继承 */
+    max-width: 1200px;			/* 最大宽度 */
+    padding: 0 20px;			/* 左右内边距均为 20 像素 */
+}
+
+/* 设置 ul 中每一个 li 的样式*/
+.menu li{
+     height: 100%;		/* 设置高度，让每一个标签的高度也等于 header 高度 */
+ }
+
+/* 设置 li 的鼠标移过动画 */
+li:hover {
+    background: rgba(34,73,118,0.95);
+	margin-block: 4px;
+    transition: 0.5s;			/* 持续 0.5 秒 */
+}
+
+/* 设置 li 中 a 标签样式，可以发现我们严格按照从外到内的原则编写样式 */
+#header .menu li a {
+    font-size: 18px;
+    color: #fff;				
+    padding: 14px 15px;
+    text-decoration: none;
+}
+
+
+/*第一个列表*/
+#header .menu .situation-subfunction{
+    display: none;		
+    position:absolute;
+	top:100px;
+    background: rgba(34,73,118,0.95);
+    border-radius: 5px;	/* 圆角处理 */
+}
+
+/* 设置 ul 中的 li 标签 */
+#header .menu .situation-subfunction li{
+    padding:0 0.5em;
+    text-align:center;
+}
+
+/* 本场第二个 hover，功能为：鼠标移过的时候，下方的 子列表 处于可见状态*/
+#header .menu .situation:hover .situation-subfunction{
+    display: block;
+}
+
+/*第二个列表*/
+#header .menu .set-subfunction{
+    display:none;	
+    position:absolute;
+	top:100px;
+    background: rgba(34,73,118,0.95);
+    border-radius: 5px;	/* 圆角处理 */
+}
+#header .menu .set-subfunction li{
+    padding:0 0.5em;
+    text-align:center;
+}
+#header .menu .set:hover .set-subfunction{
+    display: block;
+}
+
+/*第三个列表*/
+#header .menu .profession-subfunction{
+    display:none;	
+    position:absolute;
+	top:100px;
+    background: rgba(34,73,118,0.95);
+    border-radius: 5px;	/* 圆角处理 */
+}
+#header .menu .profession-subfunction li{
+    padding:0 0.5em;
+    text-align:center;
+}
+#header .menu .profession:hover .profession-subfunction{
+    display: block;
+}
+
+/*第四个列表*/
+#header .menu .science-subfunction{
+    display:none;	
+    position:absolute;
+	top:100px;
+    background: rgba(34,73,118,0.95);
+    border-radius: 5px;	/* 圆角处理 */
+}
+#header .menu .science-subfunction li{
+    padding:0 0.5em;
+    text-align:center;
+}
+#header .menu .science:hover .science-subfunction{
+    display: block;
+}
+
+/*轮播图*/
+.slideshow .image {
+    width: 100%;
+}
+.slideshow .image>img {
+    display: block; /* 去除图片底部的空白 */
+    width: 100%;    /* 让图片的宽始终的等于父元素的宽 */
+}
+
+/* 切换按钮 */
+.slideshow .previous,
+.slideshow .next {
+    position: absolute;
+    /* 下面两句实现切换按钮垂直居中 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font: 700 20px/2 "Arial";
+    color: white;
+    text-align: center;
+}
+.slideshow .next {
+    right: 5px; /* 将下一张按钮移到右边 */
+}
+.slideshow .previous:hover,
+.slideshow .next:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 放置小圆点的容器，不给它设置宽度，让它可以动态添加小圆点 */
+.slideshow .dots {
+    position: absolute;
+    bottom: 140px;   /* 从底部向上偏移150px */
+    /* 下面两句让小圆点容器实现水平居中 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slideshow .dots:hover {
+    cursor: pointer;
+}
+
+/* 小圆点样式 */
+.dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0px 2px;
+    border-radius: 8px;
+    background-color: white;
+}
+.dot:hover {
+    cursor: pointer;
+    background-color: rgb(72, 72, 72);
+}
+/* 小圆点对应的图片被展示时，小圆点变灰 */
+.dots .selected {
+    background-color: rgb(72, 72, 72);
+}
+
+/* 新闻 */
+#mulNews{
+	margin-top: 80px;
+	padding: 0px 0;
+	width:95%;
+}
+#mulNewsTop{
+	border-bottom: 1px solid #000000;
+    margin-top: -20px;
+}
+#mulNewsTop .text-left a{
+	font-size: 25px;
+    color: rgba(34,73,118,0.95);
+    text-decoration: none;
+}
+#mulNewsTop .text-right a{
+	margin-left: 100px;
+    color: rgba(34,73,118,0.95);
+}
+#mulNewsBottom{
+	margin-top:20px ;
+}
+#mulNewsBottom a{
+	color: #000000;
+	text-decoration: none;
+}
+#mulNewsBottom a:hover{
+	color: rgba(34,73,118,0.95);
+}
+.media-object{
+	width:200px
+}
+.news2 .row{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.media-body p{
+    color:rgba(0, 0, 0, 0.5);
+}
+/*************尾部样式*************/
+#footer{
+	width: 100%;
+	padding: 10px;
+	height: 100%;
+	background-color:rgba(34,73,118,0.95);
+	color: white;
+}
+#footer .footerLeft{
+	margin-left: 20px;
+}
+#footer .footerRight li{
+	font-size: 18px;
+	margin-right: 35px;
+	line-height: 80px;
+}
+
+
+
+

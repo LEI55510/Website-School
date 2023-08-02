@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--使用X-UA-Compatible来设置IE浏览器兼容模式 最新的渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CDUT BY LEI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入 Bootstrap Index -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--导航栏-->
+    <div class="container-fluid navbar-fixed-top">
+      <div class="row logoNavTop">
+        <div class="col-lg-2 col-md-3 col-sm-4 myTop">
+          <a class="cdut" href="#">
+            <img src="img/logo.png" />
+          </a>
+        </div>
+        <div id="header">
+          <!-- 这里每一个功能都设置了 class 名称 -->
+          <ul>
+            <div class="menu">
+              <li class="front-page"><a href="#">首页</a></li>
+
+              <li class="situation">
+                <a href="#">学校概况</a>
+                <!-- 这是一个子列表 -->
+                <ul class="situation-subfunction">
+                  <li><a href="#">学校简介</a></li>
+                  <li><a href="#">现任领导</a></li>
+                  <li><a href="#">大学章程</a></li>
+                </ul>
+              </li>
+
+              <li class="set">
+                <a href="#">机构设置</a>
+                <ul class="set-subfunction">
+                  <li><a href="#">地科院</a></li>
+                  <li><a href="#">地物院</a></li>
+                  <li><a href="#">实验大楼</a></li>
+                </ul>
+              </li>
+              <li class="developer-mall"><a href="#">师资队伍</a></li>
+              <li class="profession">
+                <a href="#">学科专业</a>
+                <ul class="profession-subfunction">
+                  <li><a href="#">一流学科</a></li>
+                  <li><a href="#">重点学科</a></li>
+                  <li><a href="#">特色专业</a></li>
+                </ul>
+              </li>
+              <li class="community"><a href="#">人才培养</a></li>
+              <li class="science">
+                <a href="#">科学研究</a>
+                <ul class="science-subfunction">
+                  <li><a href="#">人文社科</a></li>
+                  <li><a href="#">自然科学</a></li>
+                  <li><a href="#">学术期刊</a></li>
+                </ul>
+              </li>
+              <li class="communication"><a href="#">合作交流</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--轮播图-->
+    <div class="slideshow">
+      <!-- 图片展示 -->
+      <div class="image">
+        <!-- 通过js改变src属性值替换图片 -->
+        <img src="img/1.jpg" id="img-show" />
+      </div>
+      <!-- 上一张按钮 -->
+      <div class="previous" id="to-pre">❮</div>
+      <!-- 下一张按钮 -->
+      <div class="next" id="to-next">❯</div>
+      <!-- 自由选择小圆点 -->
+      <div class="dots" id="dot-container">
+        <!-- 小圆点由 js 动态生成 -->
+      </div>
+    </div>
+    <!--新闻-->
+    <div class="container-fluid" id="mulNews">
+      <div class="row" id="mulNewsTop">
+        <div class="col-md-10 col-sm-6 col-xs-6 text-left">
+          <a href="">要闻 / NEWS</a>
+        </div>
+        <div class="col-md-1 col-sm-5 col-xs-5 text-right">
+          <a href="">MORE>></a>
+        </div>
+      </div>
+      <div class="row" id="mulNewsBottom">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="img/7.jpg" alt="..." />
+            <div class="caption">
+              <a
+                href="https://baike.baidu.com/item/%E4%BE%8F%E7%BD%97%E7%BA%AA/233424"
+                target="_blank"
+              >
+                <h4><strong>恐龙大学的历史还得追述到远古时代</strong></h4></a
+              >
+              <a href=""
+                ><p>恐龙大学里面真的有恐龙吗？恐龙一次吃几个食堂？</p>
+                <p>当我们...</p></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="img/6.jpg" alt="..." />
+            <div class="caption">
+              <a href="https://www.csgo.com.cn/#1" target="_blank">
+                <h4><strong>王牌！理工A类专业+1</strong></h4></a
+              >
+              <a href=""
+                ><p>银一548周凌峰和陈蔚洋激动不已地表示,我们都将成为...</p>
+                <p>完美A+！</p></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 news2">
+          <div class="row">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a
+                    href="https://mp.weixin.qq.com/s/xm1uhbJXuE0oRhEhmhaLLA"
+                    target="_blank"
+                    >【国之大者】学习贯彻习近平新时代中国特色...</a
+                  >
+                </h4>
+                <p>“为中华之崛起而读书</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a
+                    href="http://cpc.people.com.cn/n1/2023/0505/c451232-32679216.html"
+                    target="_blank"
+                    >【省之要事】传达学习习近平总书记有关重...</a
+                  >
+                </h4>
+                <p>“时刻跟紧党</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a
+                    href="https://www.sc.gov.cn/10462/c105962/2023/4/27/012046c2a32d4fe4b829e27965312da6.shtml"
+                    target="_blank"
+                    >我校在“习近平新时代中国特色社会主义思想大学习...</a
+                  >
+                </h4>
+                <p>“学习新思想，争做新青年</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a
+                    href="http://news.cdut.edu.cn/info/1003/45401.htm"
+                    target="_blank"
+                    >鼎力推动学科发展 全国沉积学大会召开专题学术沙...</a
+                  >
+                </h4>
+                <p>“沉积学nb啊</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a
+                    href="http://news.cdut.edu.cn/info/1003/45409.htm"
+                    target="_blank"
+                    >我校荣获四川省科学技术奖一等奖等9项大奖</a
+                  >
+                </h4>
+                <p>“常规操作罢了</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="footer">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footerLeft">
+        <p>版权所有 © 成都理工大学</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right footerRight">
+        <ul class="list-unstyled list-inline">
+          <li>联系我们</li>
+          <li>新闻投稿</li>
+          <li>网络中心</li>
+          <li>纪检举报</li>
+        </ul>
+      </div>
+    </div>
+    <!-- 引入外部脚本文件 -->
+    <script src="js/slide.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
